@@ -1,0 +1,437 @@
+body, html{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+}
+.logo span{
+    color: #808080;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 15px;
+}
+.logo p{
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin: 5px;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    list-style: none;
+}
+#menu-list{
+    display: flex;
+    gap: 15px;
+}
+#menu-list li{
+    list-style: none;
+    text-decoration: none;
+}
+#menu-list a{
+    text-decoration: none;
+    color:#808080;
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: 25px;
+}
+#about_us{
+    color: #333;
+}
+
+[aria-controls = "menu-list"]{
+	display: none;
+}
+
+article{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    font-family: sans-serif;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-height: 200px;
+    padding: 5px;
+    margin: 15px;
+}
+.about h1{
+    font-size: 90px;
+    margin: 5px;
+}
+.about p{
+ font-size: 20px;
+ color: #333;
+ max-width: 1050px;
+}
+
+h1, h2{
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    font-weight: lighter;
+    text-decoration: none;
+    color: #808080;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    max-width: 330px;
+}
+.card img{
+    max-width: 330px;
+    max-height: 500px;
+}
+.team{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+.text{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.team h2{
+    margin: 5px;
+    color: #808080;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
+.team p{
+    max-width: 900px;
+    color: #808080;
+    font-size: 25px;
+}
+.wheel{
+    display: flex;
+    justify-content: center;
+}
+.arrow{
+    padding-top: 130px;
+    color:#808080;
+    font-size: 30px;
+}
+#larrow{
+    padding-right: 50px;
+}
+#rarrow{
+    padding-left: 50px;
+}
+.headshots{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.worker{
+    display: flex;
+    flex-direction: column;
+    gap: none;
+}
+.worker h4{
+    margin: 2px;
+    padding: 0px;
+}
+.worker img{
+    max-width: 200px;
+    max-height: 200px;
+}
+.circles{
+    display: flex;
+    color: lightgray;
+    gap: 10px;
+    margin: 4px;
+}
+#dark_g, #dark_f{
+    color: #808080;
+}
+footer{
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    grid-template-rows: repeat(3, 1fr);
+}
+.social_links{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+.social_links a{
+    display: flex;
+    gap: 15px;
+    color: gray;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#insta{
+    color: white;
+}
+.social_links i{
+    background-color: grey;
+    color: black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    padding: 3px;
+    padding-top: 4px;
+}
+.info{
+    display: flex;
+    color: grey;
+    text-align: center;
+    justify-content: space-around;
+    gap: 200px;
+}
+.info h4{
+    color: white;
+}
+#office-email{
+    color: white;
+    text-decoration: underline;
+}
+.copyright{
+    color: grey;
+    text-align: center;
+    margin: 50px;
+}
+/* Media for Sized screens */
+@media (max-width: 375px), (max-width: 768px){
+    .menu{
+		order: -1;
+	}
+
+	.menu #menu-list{
+		max-height: 0;
+		overflow: hidden;
+		transform: rotateX(90deg);
+		transition: all 0.5s;
+	}
+
+	[aria-controls = "menu-list"]{
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	[aria-expanded = "true"] ~ ul {
+		display: grid;
+		max-height: 500px;
+		transform: rotateX(0);
+	}
+
+	[aria-expanded="false"] .close{
+		display: none;
+	}
+
+	[aria-expanded="true"] .close{
+		display: inline-block;
+	}
+
+	[aria-expanded="true"] .open{
+		display: none;
+	}
+}
+ /* tablet size */
+ @media (max-width: 768px) and (min-width: 376px){
+    body, html{
+        max-width: 768px;
+    }
+    article{
+        max-width: 100%;
+        grid-template-rows: repeat(5, 405px);
+        grid-template-columns: 1fr;
+    }
+    .about{
+        max-width: 100%;
+    }
+    .about p{
+        max-width: 700px;
+    }
+    .cards{
+        flex-direction: column;
+    }
+    .card{
+        flex-direction: row;
+        max-width: 700px;
+        gap: 10px;
+    }
+    .card-info{
+        flex-direction: column;
+        max-width: ;
+    }
+    .team{
+        max-width: 768px;
+        align-items: center;
+        margin-top: 40px;
+    }
+    .text{
+        max-width: 700px;
+        margin: 0px 20px;
+    }
+    .headshots{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    footer{
+        max-width: 768px;
+    }
+    .social_links{
+        gap: 20px;
+        justify-content: space-between;
+    }
+    .info{
+        max-width: 768px;
+        justify-content: space-around;
+        gap: 20px;
+    }
+    .copyright{
+        max-width: 768px;
+    }
+
+}
+
+@media (max-width: 375px){
+    body, html{
+        max-width: 375px;
+    }
+    article{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    nav{
+        max-width: 100%;
+    }
+    .logo span{
+        font-size: 20px;
+    }
+    .logo p{
+        width: 20px;
+        height: 20px;
+        margin-top: 15px;
+        font-size: 15px;
+        padding: 2px;
+        align-content: center;
+    }
+    .about{
+        max-width: 100%;
+    }
+    .about h1{
+        font-size: 40px;
+    }
+    .about p{
+        max-width: 100%;
+        font-size: 17px;
+    }
+    .card, .cards, .card img{
+        flex-direction: column;
+        text-align: center;
+        max-width: 100%;
+        margin: 0px;
+    }
+    .card-info{
+        flex-direction: column;
+        max-width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+    .team{
+        max-width: 375px;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .team p{
+        max-width: 300px;
+    }
+    .team h2{
+        font-size: 30px;
+    }
+    .text{
+        max-width: 300px;
+        font-size: 15px;
+        margin: 0px 10px;
+    }
+    .wheel{
+        flex-direction: column;
+        margin: 10px;
+    }
+    .arrow{
+        display: none;
+        padding: 0px;
+        margin: 0;
+    }
+    #larrow, #rarrow{
+        display: none;
+    }
+    .headshots{
+        flex-direction: column;
+    }
+    .worker{
+        max-width: 100%;
+        align-items: center;
+        gap: 5px;
+    }
+    .worker img{
+        min-width: 70%;
+        max-width: 100%;
+    }
+    footer{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .social_links{
+        flex-direction: column;
+        gap: 10px;
+        padding: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+    .info{
+        flex-direction: column;
+        max-width: 375px;
+        justify-content: space-around;
+        gap: 10px;
+    }
+    .copyright{
+        max-width: 375px;
+    }
+}
+
